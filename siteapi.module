@@ -49,6 +49,7 @@ function siteapi_form_alter(array &$form, FormStateInterface $form_state, $form_
 function siteapikey_submit(array &$form, FormStateInterface $form_state)
 {
   $siteapikey = $form_state->getValue('siteapikey');
+  // Save the Apikey in the database
   \Drupal::configFactory()->getEditable('system.site')->set('siteapikey', $siteapikey)
     ->save();
   drupal_set_message('the Site API Key has been saved with "' . $siteapikey . '" value.');

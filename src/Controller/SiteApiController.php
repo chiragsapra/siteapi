@@ -36,6 +36,7 @@ class SiteApiController
    */
   public function pageJson($siteapikey, NodeInterface $node)
   {
+    // Json Response of node object
     return new JsonResponse($node->toArray());
   }
 }
