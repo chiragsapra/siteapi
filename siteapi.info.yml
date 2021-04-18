@@ -1,5 +1,5 @@
-name: siteapi
-description: 'Module for config form'
+name: Site Information & Node API
+description: Alter drupal's "Site information" form
 type: module
 package: Custom
 dependencies:
