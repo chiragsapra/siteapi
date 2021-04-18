@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Drupal\Core\Access\AccessResult;
 
 /**
- * Defines the SiteInfo controller.
+ * Defines the SiteApi controller.
  */
 class SiteApiController
 {
@@ -17,7 +17,7 @@ class SiteApiController
    */
   public function access($siteapikey, NodeInterface $node)
   {
-    // Node whether exist or not is handled by the routing file
+    // Node is exist or not is handled by the routing file
     // Allow only if the site api key matches
     if ($siteapikey == \Drupal::config('system.site')->get('siteapikey')) {
 
